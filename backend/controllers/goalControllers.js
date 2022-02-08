@@ -1,0 +1,30 @@
+
+//@desc Get Goals
+//@route GET api/goal
+//@access private
+const getGoals = (req,res)=>{
+    res.status(200).json({ message: "Get Goals..."});
+}
+
+//@desc Set Goal
+//@route POST api/goal
+//@access private
+const setGoal = (req,res)=>{
+    res.status(201).json({message:"set Goal..."})
+}
+
+//@desc Update Goal
+//@route PUT api/goal/:id
+//@access private
+const updateGoal = (req,res)=>{
+    res.status(200).json({message:`Update Goal...id-${req.params.id}`})
+}
+
+//@desc Delete Goal
+//@route DELETE api/goal/:id
+//@access private
+const deleteGoal = (req,res)=>{
+    res.status(200).json({message:`Delete Goal...id-${req.params.id}`})
+}
+
+module.exports = {getGoals,setGoal,updateGoal,deleteGoal}
